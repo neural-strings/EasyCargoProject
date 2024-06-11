@@ -14,15 +14,19 @@ import lombok.Setter;
 @Table(name = "car_model")
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
-    @Column(name = "ChatId")
+
+    @Column(name = "chat_id")
     protected  Long chatId;
+
     @Column(name = "name")
     protected String name;
+
     @Column(name = "cargo_width")
     protected int cargoWidth;
+
     @Column(name = "cargo_height")
     protected int cargoHeight;
 
