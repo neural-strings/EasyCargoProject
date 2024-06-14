@@ -11,35 +11,35 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "car_model")
-public class Car {
+@Table(name = "cargo_model")
+public class Cargo {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
 
-    @Column(name = "chat_id")
-    protected  Long chatId;
+    @Column(name = "scheme")
+    protected String scheme;
 
     @Column(name = "name")
     protected String name;
 
-    @Column(name = "cargo_width")
-    protected int cargoWidth;
+    @Column(name = "chat_id")
+    protected  Long chatId;
 
-    @Column(name = "cargo_height")
-    protected int cargoHeight;
+    @Column(name = "car_id")
+    protected Integer carId;
 
-    public Car(
+    public Cargo(
             String name,
-            int cargoWidth,
-            int cargoHeight,
-            Long chatId
+            String scheme,
+            Long chatId,
+            Integer carId
     )
     {
         this.name = name;
-        this.cargoWidth = cargoWidth;
-        this.cargoHeight = cargoHeight;
+        this.scheme = scheme;
         this.chatId = chatId;
+        this.carId = carId;
     }
 }
