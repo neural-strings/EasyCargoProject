@@ -1,10 +1,7 @@
 package org.easyCargoProject.org.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -14,8 +11,8 @@ import lombok.Setter;
 @Table(name = "car_model")
 public class Car {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     protected Integer id;
 
     @Column(name = "chat_id")
